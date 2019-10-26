@@ -1,0 +1,14 @@
+@import "./_Variables.scss";
+
+.Player {
+  position: absolute;
+  width: $mariaWidth;
+  height: $mariaHeight;
+  z-index: 2;
+  left: 0;
+  bottom: $groundHeight;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: left 400ms ease-out, bottom 100ms ease-out;
+}
