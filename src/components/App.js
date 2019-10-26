@@ -1,26 +1,22 @@
-import React from "./node_modules/react";
-import logo from "./logo.svg";
-import "./styles/App.scss";
+import React from "react";
+import Background from "./Background";
+import "../styles/App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      scenarioPosition: 0
+    };
+  }
+  render() {
+    const { scenarioPosition } = this.state;
+    return (
+      <div className="App">
+        <Background position={scenarioPosition} />
+      </div>
+    );
+  }
 }
 
 export default App;

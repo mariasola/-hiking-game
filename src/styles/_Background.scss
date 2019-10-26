@@ -1,0 +1,11 @@
+@import "./_Variables.scss";
+.Background {
+  @extend .absoluteFill;
+  z-index: 1;
+  background-image: url("../images/ground.png"), url("../images/back.jpg");
+  background-color: #7ac9f9;
+  background-repeat: repeat-x, repeat-x, repeat-x;
+  background-position: left 0px bottom 0px, left 0px bottom $groundHeight,
+    left 0px bottom 0px;
+  transition: background-position 150ms ease-out;
+}
